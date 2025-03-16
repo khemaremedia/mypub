@@ -8,7 +8,7 @@ df.show(10)
 #added via vs code
 df_to_write = df.limit(100)
 
-s3_bucket_path = 's3://mydbricks-bucket/dbricks-output'
+s3_bucket_path = 's3://dbricks-external-data/dbricks-output'
 try:
     df_to_write.write.parquet(s3_bucket_path, mode='overwrite')
     print(f"Save in s3 successful")
